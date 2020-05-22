@@ -7,7 +7,7 @@ hour however it will only update the calendar display once a day, at midnight.
 ## Installing the module
 Clone this repository in your `~/MagicMirror/modules/` folder `( $ cd ~MagicMirror/modules/ )`:
 ````javascript
-git clone https://github.com/KirAsh4/calendar_monthly
+https://github.com/bpcode/calendar_monthly.git
 ````
 
 ## Using the module
