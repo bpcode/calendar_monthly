@@ -4,7 +4,7 @@
  */
 
 #calendar-table {
-	padding: 5px;
+	/* padding: 5px; */
 	display: table;
 	width: 100%;
 }
@@ -13,13 +13,20 @@
 	font-weight: bold;
 	text-align: center;
 	font-size: 1.4em;
-	padding-bottom: 7px;
+	/* padding-bottom: 7px; */
 	border-bottom: 1px solid #cccccc;
 }
 
 .calendar-header-day {
 	text-align: center;
-	color: #cccccc;
+	color: #fff;
+	margin: 2px 0px;
+	padding-top: 7px;
+}
+
+.calendar-header-day-weekend {
+	text-align: center;
+	color: LimeGreen;
 	margin: 2px 0px;
 	padding-top: 7px;
 }
@@ -38,8 +45,14 @@
 }
 
 .square-content .today {
-	color: #ffffff;
+	color: yellow;
 	font-weight: bold;
+}
+.daily {
+	color: #fff;
+}
+.daily-weekend {
+	color: LimeGreen;
 }
 
 .footer {

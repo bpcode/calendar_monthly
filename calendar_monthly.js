@@ -41,7 +41,7 @@
 		Log.log("Starting module: " + this.name);
 		// Set locale
 		moment.locale(config.language);
-		
+
 		// Calculate next midnight and add updateDelay
 		var now = moment();
 		this.midnight = moment([now.year(), now.month(), now.date() + 1]).add(this.config.updateDelay, "seconds");
@@ -121,7 +121,13 @@
 
 			for (var i = 0; i <= 6; i++ ){
 				var bodyTD = document.createElement("td");
-				bodyTD.className = "calendar-header-day";
+        if (i==0 || i==6) {
+            bodyTD.className = "calendar-header-day-weekend";
+        }
+        else {
+          bodyTD.className = "calendar-header-day";
+        }
+
 				bodyTD.innerHTML = moment().weekday(i).format("ddd");
 				bodyTR.appendChild(bodyTD);
 			}
@@ -159,7 +165,13 @@
 							innerSpan.className = "today";
 						} else {
 							innerSpan.id = "day" + day;
-							innerSpan.className = "daily";
+              if (j==0 || j==6) {
+                  innerSpan.className = "daily-weekend";
+              }
+              else {
+                innerSpan.className = "daily";
+              }
+							//innerSpan.className = "daily";
 						}
 						innerSpan.innerHTML = day;
 						day++;
@@ -172,7 +184,7 @@
 					squareContentInner.appendChild(innerSpan);
 					squareContent.appendChild(squareContentInner);
 					squareDiv.appendChild(squareContent);
-					bodyTD.appendChild(squareDiv);	
+					bodyTD.appendChild(squareDiv);
 					bodyTR.appendChild(bodyTD);
 				}
 				// Don't need any more rows if we've run out of days
@@ -184,7 +196,7 @@
 					var bodyTR = document.createElement("tr");
 					bodyTR.className = "weekRow";
 				}
-			}	
+			}
 
 			bodyContent.appendChild(bodyTR);
 			wrapper.appendChild(bodyContent);
