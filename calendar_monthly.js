@@ -65,7 +65,7 @@
 			var startingDay = moment().date(1).weekday();
 
 			var wrapper = document.createElement("table");
-			wrapper.className = 'xsmall';
+			wrapper.className = 'small';
 			wrapper.id = 'calendar-table';
 
 			// Create THEAD section with month name and 4-digit year

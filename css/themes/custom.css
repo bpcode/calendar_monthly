@@ -5,7 +5,7 @@
 #yearDigits {
 	color: #fff;
 	font-weight: normal;
-} 
+}
 
 #monthName {
 	font-weight: normal;
@@ -25,12 +25,12 @@
 	color: #333333;
 }
 
-/*.square-box {
+.square-box {
 	position: relative;
-	width: 50%;
+	width: 75%;
 	overflow: hidden;
-	margin: 0px auto;
-}*/
+	margin: 2px auto;
+}
 
 .square-box:before {
 	content: "";
@@ -46,11 +46,12 @@
 }
 
 .square-content .today {
-/*	border: 1px solid #80ff00;
-	font-weight: normal; */
+	border: 1px solid #80ff00;
+	font-weight: normal;
 	font-weight: 500;
-	font-size: 20px;
-	color: #80ff00;
+	font-size: 30px;
+	line-height: 35px;
+	color: yellow; /*#80ff00;*/
 }
 
 .square-content div {
